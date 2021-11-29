@@ -10,11 +10,11 @@ class phoneBook:
     Create a connection to the database
     '''
     HOST = "localhost"
-    USER = "test"
-    DB = "test"
-    PASS="KenyonTest2020"
+    USER = "yarber1"
+    DB = "yarber1"
+    PASS="S217458"
     self.mydb = mysql.connector.connect(
-      host=HOST,
+      host= localhost,
       user=USER,
       passwd=PASS,
       database=DB,
