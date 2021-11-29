@@ -10,7 +10,7 @@ import cgitb
 cgitb.enable(display=0, logdir="/home/fifo")
 
 # Must be of form  '/home/students/username/PhoneBookPython/' for students
-sys.path.insert(1, '/home/skon/PhoneBookPython/')
+sys.path.insert(1, '/home/yarber1/GetOnWithIt/')
 
 from phoneBook import phoneBook
 
