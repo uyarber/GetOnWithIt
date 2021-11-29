@@ -93,7 +93,7 @@ function editEntry(){
     console.log("Firstname:" + $('#editfirst').val() + "ID:" + editid);
     $('#searchresults').empty();
     $.ajax({
-	url: '/cgi-bin/skon_phoneApp.py?editid='+editid +'&editfname='+$('#editfirst').val()+'&editlname='+$('#editlast').val()+'&editphone='+$('#editphone').val()+'&edittype='+$('#edittype').text()+'&operation=edit',
+	url: '/cgi-bin/yarber1_GetOn.py?editid='+editid +'&editfname='+$('#editfirst').val()+'&editlname='+$('#editlast').val()+'&editphone='+$('#editphone').val()+'&edittype='+$('#edittype').text()+'&operation=edit',
 	dataType: 'text',
 	success: editDone(),
 	error: function(){alert("Error: Something went wrong");}
@@ -106,7 +106,7 @@ function processDelete(){
     $('#searchresults').empty();
     var id=$(this).attr('ID');
     $.ajax({
-	url: '/cgi-bin/skon_phoneApp.py?deleteid='+$(this).attr('ID')+'&operation=delete',
+	url: '/cgi-bin/yarber1_GetOn.py?deleteid='+$(this).attr('ID')+'&operation=delete',
 	dataType: 'text',
 	success: function(){alert("Deleted Record: " +id );},
 	error: function(){alert("Error: Something went wrong");}
@@ -128,7 +128,7 @@ function getMatches(){
     $('.editdata').hide();
     $('#searchresults').empty();
     $.ajax({
-	url: '/cgi-bin/skon_phoneApp.py?find='+$('#search').val()+'&operation='+operation,
+	url: '/cgi-bin/yarber1_GetOn.py?find='+$('#search').val()+'&operation='+operation,
 	dataType: 'text',
 	success: processResults,
 	error: function(){alert("Error: Something went wrong");}
@@ -150,7 +150,7 @@ function addEntry(){
     console.log("Firstname:" + $('#addfirst').val());
     $('#searchresults').empty();
     $.ajax({
-	url: '/cgi-bin/skon_phoneApp.py?afname='+$('#addfirst').val()+'&alname='+$('#addlast').val()+'&aphone='+$('#addphone').val()+'&atype='+$('#addtype').text()+'&operation='+operation,
+	url: '/cgi-bin/yarber1_GetOnp.py?afname='+$('#addfirst').val()+'&alname='+$('#addlast').val()+'&aphone='+$('#addphone').val()+'&atype='+$('#addtype').text()+'&operation='+operation,
 	dataType: 'text',
 	success: processAdd,
 	error: function(){alert("Error: Something went wrong");}
